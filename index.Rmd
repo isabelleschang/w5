@@ -1,0 +1,30 @@
+---
+title: "vowels!"
+date: "today"
+author: "isabelle"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, 'setup', message=FALSE}
+#message=false: code is still echoed, but message is gone
+library(tidyverse)
+library(untidydata)
+```
+
+```{r, 'spanish_vowel', out.width="100%", message=FALSE}
+spanish_vowels
+spanish_vowels %>%
+  separate(col = label,
+           into = c("id", "bs", "vowel"),
+           sep = "-"
+          ) %>%
+  ggplot() +
+  aes(x=f2, y=f1, label=vowel, color = vowel) +
+  facet_grid(.~bs) +
+  geom_text(alpha=0.5) +#geom_point()
+  scale_y_reverse() +
+  scale_x_reverse()
+```
+

@@ -1,0 +1,33 @@
+---
+title: "linear_model"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## linear model
+- model: using math to describe data (e.g., the mean is a simple model)
+- linear model: like linear algebra, y = a + bx
+  - a, b:
+  - y = , x = 
+  - must introduce error $\epsilon$ because data will almost never fit exactly to a line
+- using mean squared error (aka sum of squares of errors)
+- how does least squares relate to correlation? standard variables?
+- ordinary least squares method --> we'll abandon this later for something more algorithmic
+- differences between predicted values $\hat{y}$ and observed data $y_i$
+- $R^{2}$: overall assessment of model fit; variance expalined by model
+  - ranges from 0-1 (1 = 100% variance explained)
+- literally calculated as r*r = $R^2$ (r = correlation coefficient?)
+- understanding variance requires an understanding of deviance between observed variable $y_i$, mean value of y $\bar{y}$, and value of y predicted by model $\hat{y}$
+  - total dev: $y_i - \bar{y}$
+  - predicted dev: $\hat{y} - \bar{y}$
+  - error dev: $y_i - \hat{y}$
+  - can so sum of squared errors on all of these too! $SS_{total} = SS_{predicted} + SS_{error}$
+
+```{r}
+37.29-5.34
+37.29-5.34*3
+37.29-5.34*6
+```
